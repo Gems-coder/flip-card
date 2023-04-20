@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+      background-color: hsl(0, 0%, 95%); 
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      font-family: 'Lexend Deca', sans-serif;
+  }
+
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+main{
+    width: 1000px;
+    display: flex;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden; 
+    height: 500px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #fcfafa;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* padding: 20px; */
+    /* text-align: center; */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  /* .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  } */
+  
+  /* Style the back side */
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .div{
+    padding: 20px;
+  }
+
+  #sedans{
+    background-color: var(--Bright-orange);
+}
+
+#suvs{
+    background-color: var(--Dark-cyan);
+}
+
+#luxury{
+    background-color: var(--Very-dark-cyan);
+}
+
+h2{
+    color:  hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+p{
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin: 30px 0 20px 0;
+    line-height: 30px;
+}
+
+button{
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.b1{
+    color: var(--Bright-orange);
+}
+
+.b1:hover{
+    background-color: var(--Bright-orange);
+    color: white;
+    border: solid white;
+}
+
+.b2{
+    color: var(--Dark-cyan);
+}
+
+.b2:hover{
+    background-color: var(--Dark-cyan);
+    color: white;
+    border: solid white;
+}
+
+.b3{
+    color: var(--Very-dark-cyan);
+}
+
+.b3:hover{
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    border: solid white;
+}
+
+#info{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center; 
+        padding: 20px;
+        margin: 0 ;
+        height: auto;
+    }  
+    
+    .flip-card{
+        height: 400px;
+    }
+}
