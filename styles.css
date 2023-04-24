@@ -262,7 +262,7 @@ button:active {
     position: absolute;
     top: 0;
     left: 0;
-    border: solid red;
+    /* border: solid red; */
   
     pointer-events: none;
   }
@@ -376,7 +376,7 @@ button:active {
     }  
     
     .flip-card{
-        height: 400px;
+        height: 500px;
     }
 
 }
